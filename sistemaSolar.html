@@ -11,9 +11,13 @@
             <a-sphere position="2.2 0 0" radius="0.2" color="#f4d65c"></a-sphere>
             <!-- Tierra-->
             <a-sphere position="3 0 0" radius="0.2" color="mediumseagreen">
-            <a-entity id="child2" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 1000"></a-entity>
-              <!-- Luna -->
+               <!-- Luna -->
                <a-sphere position="0.22 0 0" radius="0.1" color="grey"></a-sphere>
+               <a-animation attribute="rotation"
+                 dur="5000"
+                 easing="linear"
+                 loop="true"
+                 to="0 360 0"></a-animation>
             </a-sphere>
             <a-sphere position="4.6 0 0" radius="0.2" color="#de575d"></a-sphere>
             <a-sphere position="15.8 0 0" radius="0.5" color="#e7a71d"></a-sphere>
