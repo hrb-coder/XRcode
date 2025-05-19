@@ -5,12 +5,14 @@
   <body>
     <a-scene xr-mode-ui="XRMode: xr">
         <a-sphere position="0 0 0" radius="0.7" color="yellow"></a-sphere>
-        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true>
             <a-sphere position="1.2 0 0" radius="0.05" color="grey" 
             animation="property: rotation; dur:5000"></a-sphere>
-            <a-sphere position="2.2 0 0" radius="0.2" color="#f4d65c"></a-sphere>
+            <a-sphere position="2.2 0 0" radius="0.2" color="#f4d65c"
+            animation="property: rotation; dur:10000></a-sphere>
             <!-- Tierra-->
-            <a-sphere position="3 0 0" radius="0.2" color="mediumseagreen">
+            <a-sphere position="3 0 0" radius="0.2" color="mediumseagreen"
+            animation="property: rotation; dur:10000>
                <!-- Luna -->
                <a-sphere position="0.22 0 0" radius="0.1" color="grey"></a-sphere>
                <a-animation attribute="rotation"
