@@ -14,13 +14,11 @@
             <a-sphere position="2.2 0 0" radius="0.03" color="#f4d65c"></a-sphere>
             <!-- Tierra-->
             <a-sphere position="3 0 0" radius="0.04" color="mediumseagreen">
+            <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; 
+                dur: 10000; loop: true">
                <!-- Luna -->
                <a-sphere position="0.22 0 0" radius="0.01" color="grey"></a-sphere>
-               <a-animation attribute="rotation"
-                 dur="5000"
-                 easing="linear"
-                 loop="true"
-                 to="0 360 0"></a-animation>
+            </a-entity>
             </a-sphere>
             <a-sphere position="4.6 0 0" radius="0.02" color="#de575d"></a-sphere>
             <a-sphere position="15.8 0 0" radius="0.41" color="#e7a71d"></a-sphere>
@@ -33,8 +31,8 @@
             <!-- Neptuno-->
             <a-sphere position="91.4 0 0" radius="0.14" color="white"></a-sphere>
         </a-entity>
-      <!-- a-sky hide-on-enter-ar color="blue"></a-sky -->
-      <a-sky hide-on-enter-ar src="#fondo"></a-sky>
+      <a-sky hide-on-enter-ar color="blue"></a-sky>
+      <!--a-sky hide-on-enter-ar src="#fondo"></a-sky-->
     </a-scene>
   </body>
 </html>
