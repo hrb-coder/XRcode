@@ -1,0 +1,36 @@
+ <html>
+  <head>
+       <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene xr-mode-ui="XRMode: xr">
+        <a-sphere position="0 0 0" radius="2" color="yellow"></a-sphere>
+        <a-entity rotation="0 0 0" 
+          animation="property: rotation; to: 0 360 0; dur: 10000; loop: true">
+            <a-sphere position="1.2 0 0" radius="0.01" color="grey"></a-sphere>
+            <a-sphere position="2.2 0 0" radius="0.03" color="#f4d65c"></a-sphere>
+            <!-- Tierra-->
+            <a-sphere position="3 0 0" radius="0.04" color="mediumseagreen">
+               <!-- Luna -->
+               <a-sphere position="0.22 0 0" radius="0.01" color="grey"></a-sphere>
+               <a-animation attribute="rotation"
+                 dur="5000"
+                 easing="linear"
+                 loop="true"
+                 to="0 360 0"></a-animation>
+            </a-sphere>
+            <a-sphere position="4.6 0 0" radius="0.02" color="#de575d"></a-sphere>
+            <a-sphere position="15.8 0 0" radius="0.41" color="#e7a71d"></a-sphere>
+            <!-- Saturno -->
+            <a-sphere position="29 0 0" radius="0.35" color="#e7a71d">
+              <a-circle color="e7a71d" rotation="0 0 90" radius="0.7"></a-circle>
+            </a-sphere>
+            <!-- Urano -->
+            <a-sphere position="58.3 0 0" radius="0.15" color="blue"></a-sphere>
+            <!-- Neptuno-->
+            <a-sphere position="91.4 0 0" radius="0.14" color="blue"></a-sphere>
+        </a-entity>
+      <a-sky hide-on-enter-ar color="blue"></a-sky>
+    </a-scene>
+  </body>
+</html>
