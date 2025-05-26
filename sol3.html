@@ -1,0 +1,85 @@
+ <html>
+  <head>
+       <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene xr-mode-ui="XRMode: xr">
+    <a-assets>
+        <img id="fondo" src="images_ssolar/ngc6090Velo_40x800_60s_v1.jpg">
+        <img id="LunaLabel" src="images_ssolar/LunaLabel.png">
+        <img id="MercurioLabel" src="images_ssolar/MercurioLabel.png">
+        <img id="Jupiter" src="images_ssolar/960px-Jupiter_in_true_color.jpg">
+
+    </a-assets>
+        <!-- Sol  -->
+        <a-sphere position="0 0 0" radius="0.7" color="yellow"></a-sphere>
+        <!-- Mercurio -->
+        <a-entity rotation="0 0 0" 
+          animation="property: rotation; to: 0 360 0; dur: 2408; loop: true">
+            <a-sphere position="1.2 0 0" radius="0.01" color="grey">
+            <a-cone position="0.01 -0.18 0" radius-bottom="0.05" height="0.3" color="red"></a-cone>
+            <!-- a-image position="0.01 -0.8 0" src="#MercurioLabel"></a-image -->
+            <a-plane grabbable position="0.01 -0.8 0" width="1" height="1" color="white">
+                <a-entity htmlembed="ppu: 1000" position="0 0 0.03"
+                 style="height: 100px; width: 200px; text-align: center; padding: 0 0;
+                 border:2px solid black;">
+                <h1>Mercurio</h1>
+                </a-entity>
+            </a-plane>
+            </a-sphere>
+        </a-entity>
+        <!-- Venus -->
+        <a-entity rotation="0 0 0" 
+          animation="property: rotation; to: 0 360 0; dur: 6152; loop: true">
+            <a-sphere position="2.2 0 0" radius="0.03" color="#f4d65c"></a-sphere>
+        </a-entity>
+        <!-- Tierra-->
+        <a-entity rotation="0 0 0" 
+          animation="property: rotation; to: 0 360 0; dur: 10000; loop: true">
+            <a-sphere position="3 0 0" radius="0.04" color="mediumseagreen">
+                <!-- Luna -->
+                <a-image position="0.01 -0.6 0" src="#LunaLabel"></a-image>
+            <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; 
+                dur: 1000; loop: true">
+               <!-- Luna -->
+                <a-sphere position="0.06 0 0" radius="0.01" color="yellow">
+                    <!-- marcar posición de la Luna-->
+                    <a-cone position="0.01 -0.31 0" radius-bottom="0.05" height="0.3" color="red"></a-cone>
+                </a-sphere> 
+            </a-entity>
+            </a-sphere>
+        </a-entity>
+        <!-- Marte -->
+        <a-entity rotation="0 0 0" 
+          animation="property: rotation; to: 0 360 0; dur: 18808; loop: true">
+            <a-sphere position="4.6 0 0" radius="0.02" color="#de575d"></a-sphere>
+        </a-entity>
+        <!-- Júpiter -->
+        <a-entity rotation="0 0 0" 
+          animation="property: rotation; to: 0 360 0; dur: 118617; loop: true">
+            <a-sphere position="15.8 0 0" radius="0.41" src="#Jupiter">
+            <!--color="#e7a71d"-->
+            </a-sphere>
+        </a-entity>
+        <!-- Saturno -->
+        <a-entity rotation="0 0 0" 
+          animation="property: rotation; to: 0 360 0; dur: 294564; loop: true">
+            <a-sphere position="29 0 0" radius="0.35" color="#e7a71d">
+              <a-circle color="#e7a71d" rotation="45 0 0" radius="0.7"></a-circle>
+            </a-sphere>
+        </a-entity>
+        <!-- Urano -->
+        <a-entity rotation="0 0 0" 
+          animation="property: rotation; to: 0 360 0; dur: 840179; loop: true">
+            <a-sphere position="58.3 0 0" radius="0.15" color="cyan"></a-sphere>
+        </a-entity>
+        <!-- Neptuno-->
+        <a-entity rotation="0 0 0" 
+          animation="property: rotation; to: 0 360 0; dur: 840179; loop: true">
+            <a-sphere position="91.4 0 0" radius="0.14" color="white"></a-sphere>
+        </a-entity>
+      <!--a-sky hide-on-enter-ar color="blue"></a-sky -->
+      <a-sky hide-on-enter-ar src="#fondo"></a-sky>
+    </a-scene>
+  </body>
+</html>
